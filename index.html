@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Memory</title>
+    <style>
+        .noMove {
+            pointer-events: none;
+        }
+
+        .face-cache {
+            content: url("hide.png");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="pageAcceuil">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 bg-dark text-white mt-5 rounded">
+                <div class="container-fluid">
+                    <h1 class="mt-4">Jeu Memory Card</h1>
+                    <p>
+                        Le jeu de « Memory Card » consiste à retourner simultanément 2 cartes de même faces. <br>
+                        Au début toutes cartes ont des faces cachés. En jouant, si deux cartes sont identiques elles
+                        restent visibles, sinon elles disparaissent après un laps de temps. <br>
+                        Le jeu se termine quand toutes les paires ont été découvertes.
+                    </p>
+
+                    <button type="button" class="btn btn-light mb-3" onclick="commencer()">Commencer maintenant</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-none mb-4" id="debutJeu">
+        <div class="row">
+            <div class="col-lg-8 offset-2 bg-secondary px-4 pb-4 mt-4 rounded text-white">
+                <div class="row mt-4">
+                    <div class="col-lg-5">
+                        <h1>Jeu Memory Card</h1>
+                    </div>
+                    <div class="col-lg-7 text-end">
+                        <button type="button" class="btn btn-warning text-white" onclick="abandon()"
+                            id="abandon">Abandonner</button>
+                        <button type="button" class="btn btn-info text-white" onclick="restart()"
+                            id="restart">Recommencer le jeu</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <button type="button" class="btn btn-dark text-white" id="tentative">Nombre de clics: <b>0</b>
+                        </button>
+                    </div>
+                    <div class="col-lg-6 text-end">
+                        <button type="button" class="btn btn-success text-white" id="valide">Nombre de pairs trouvés:
+                            <b>0</b> </button>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mb-4">
+                    <div class="col-lg-3">
+                        <img src="1.png" class="img-fluid rounded" id="image1" alt="picture1">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="2.png" class="img-fluid rounded" id="image2" alt="picture2">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="3.png" class="img-fluid rounded" id="image3" alt="picture3">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="4.png" class="img-fluid rounded" id="image4" alt="picture4">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-3">
+                        <img src="5.png" class="img-fluid rounded" id="image5" alt="picture5">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="6.png" class="img-fluid rounded" id="image6" alt="picture6">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="7.png" class="img-fluid rounded" id="image7" alt="picture7">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="8.png" class="img-fluid rounded" id="image8" alt="picture8">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-3">
+                        <img src="1.png" class="img-fluid rounded" id="image9" alt="picture1">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="2.png" class="img-fluid rounded" id="image10" alt="picture2">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="3.png" class="img-fluid rounded" id="image11" alt="picture3">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="4.png" class="img-fluid rounded" id="image12" alt="picture4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="5.png" class="img-fluid rounded" id="image13" alt="picture5">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="6.png" class="img-fluid rounded" id="image14" alt="picture6">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="7.png" class="img-fluid rounded" id="image15" alt="picture7">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="8.png" class="img-fluid rounded" id="image16" alt="picture8">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="memory.js"></script>
+</body>
+
+</html>
